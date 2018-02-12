@@ -112,13 +112,11 @@
 
 - (void)parseConfig:(NSDictionary *)buttonConfig
 {
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     if (buttonConfig[@"backgroundColor"])
     {
         self.defaultBackgroundColor = buttonConfig[@"backgroundColor"];
-    }
-    if (buttonConfig[@"textColor"])
-    {
-        [self setTitleColor:buttonConfig[@"textColor"] forState:UIControlStateNormal];
     }
     if (buttonConfig[@"cornerRadius"])
     {
