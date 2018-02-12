@@ -60,6 +60,7 @@
     self.frame = CGRectMake(0.0f, 0.0f, windowWidth - (MARGIN_BUTTON * 2), MIN_HEIGHT);
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.layer.cornerRadius = 3.0f;
 }
 
@@ -112,8 +113,6 @@
 
 - (void)parseConfig:(NSDictionary *)buttonConfig
 {
-    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
     if (buttonConfig[@"backgroundColor"])
     {
         self.defaultBackgroundColor = buttonConfig[@"backgroundColor"];
