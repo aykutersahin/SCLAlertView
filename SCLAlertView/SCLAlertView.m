@@ -967,10 +967,6 @@ SCLTimerDisplay *buttonTimer;
     
     for (SCLButton *btn in _buttons)
     {
-        if (style == SCLAlertViewStyleWarning)
-        {
-            [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        }
         
         if (!btn.defaultBackgroundColor) {
             btn.defaultBackgroundColor = viewColor;
